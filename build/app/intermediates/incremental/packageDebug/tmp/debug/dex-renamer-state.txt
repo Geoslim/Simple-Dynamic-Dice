@@ -1,0 +1,4 @@
+#Tue May 12 23:35:02 WAT 2020
+base.0=C\:\\Users\\user\\AndroidStudioProjects\\dynamic_dice\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
