@@ -39,25 +39,58 @@ class _DicePageState extends State<DicePage> {
 
   Widget _getIcon() {
     if (add >= 9)
-      return Icon(
-        Icons.tag_faces,
-        color: Colors.white,
-        size: 50.0,
+      return Column(
+        children: <Widget>[
+          Icon(
+            Icons.tag_faces,
+            color: Colors.white,
+            size: 50.0,
+          ),
+          Text(
+            'Great!!',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20.0,
+            ),
+          ),
+        ],
       );
     else if (add > 4)
-      return Icon(
-        Icons.face,
-        color: Colors.white,
-        size: 50.0,
+      return Column(
+        children: <Widget>[
+          Icon(
+            Icons.face,
+            color: Colors.white,
+            size: 50.0,
+          ),
+          Text(
+            'Not Bad!',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20.0,
+            ),
+          ),
+        ],
       );
     else if (add <= 4)
-      return Icon(
-        Icons.thumb_down,
-        color: Colors.white,
-        size: 50.0,
+      return Column(
+        children: <Widget>[
+          Icon(
+            Icons.thumb_down,
+            color: Colors.white,
+            size: 50.0,
+          ),
+          Text(
+            'You\'re Joking Right?',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20.0,
+            ),
+          ),
+        ],
       );
     else
-      return Icon(Icons.wb_sunny);
+      return Icon(Icons.tag_faces);
   }
 
   @override
@@ -68,11 +101,13 @@ class _DicePageState extends State<DicePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Text(
-                '$numberRolled',
-                style: TextStyle(
-                  fontSize: 60.0,
-                  color: Colors.white,
+              Center(
+                child: Text(
+                  '$numberRolled',
+                  style: TextStyle(
+                    fontSize: 60.0,
+                    color: Colors.white,
+                  ),
                 ),
               ),
               _getIcon(),
@@ -109,7 +144,7 @@ class _DicePageState extends State<DicePage> {
               padding: EdgeInsets.all(18.0),
               color: Colors.amberAccent,
               child: Text(
-                "Roll Yo!!",
+                "Roll Dice!!",
                 style: TextStyle(fontSize: 20.0),
               ),
               splashColor: Colors.white,
